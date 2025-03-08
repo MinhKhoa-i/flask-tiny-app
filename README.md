@@ -17,7 +17,7 @@ Võ Anh Kiệt - 22001245
 ### Cách 1: Chạy ứng dụng trên môi trường local
 1. **Clone repo** về máy:
    ```sh
-   git clone https://github.com/yourusername/flask-tiny-app.git
+   git clone https://github.com/MinhKhoa-i/flask-tiny-app.git
    cd flask-tiny-app
    ```
 2. **Tạo môi trường ảo và cài đặt thư viện**:
