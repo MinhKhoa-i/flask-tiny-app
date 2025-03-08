@@ -1,4 +1,7 @@
-Vuong Nguyen Minh Khoa 22681791
+Vương Nguyễn Minh Khoa - 22681791
+Võ Anh Kiệt - 22001245
+
+
 # RELEASE NOTES - flask-tiny-app
 
 ## Mô tả Project
