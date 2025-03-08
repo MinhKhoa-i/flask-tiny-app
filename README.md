@@ -37,11 +37,11 @@ Vuong Nguyen Minh Khoa 22681791
 1. **Cài đặt Docker (nếu chưa có)**
 2. **Build Docker Image**:
    ```sh
-   docker build -t flask-tiny-app .
+   docker build -t tiny-app .
    ```
 3. **Chạy ứng dụng**:
    ```sh
-   docker run -p 5000:5000 flask-tiny-app
+   docker run -p 5000:5000 tiny-app
    ```
 4. **Mở trình duyệt và truy cập**:
    ```
@@ -88,11 +88,5 @@ Vuong Nguyen Minh Khoa 22681791
 - Hướng dẫn sử dụng Docker để deploy ứng dụng.
 
 ---
-
-### Hướng dẫn cập nhật
-- **Git commit theo từng version**: `git tag -a vX.Y.Z -m "Release version X.Y.Z"`
-- **Push tag lên GitHub**: `git push origin vX.Y.Z`
-
-Mọi góp ý hoặc vấn đề vui lòng tạo issue trên GitHub!
 
 
