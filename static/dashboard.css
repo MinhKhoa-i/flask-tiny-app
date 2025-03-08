@@ -1,0 +1,755 @@
+/* static/dashboard.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 40px 50px;
+    border: 10px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 40px 40px -20px;
+    margin: 20px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 36px;
+    color: rgb(16, 137, 211);
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+h4 {
+    color: #34495e;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+/* Alerts */
+.alert {
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* User Info */
+.user-info-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.user-info-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa avatar và thông tin */
+}
+
+.user-avatar {
+    flex: 0 0 auto; /* Không co giãn, cố định kích thước */
+}
+
+.avatar-image {
+    width: 150px; /* Kích thước avatar */
+    height: 150px;
+    border-radius: 50%; /* Hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+.user-info-details {
+    flex: 1; /* Chiếm phần còn lại */
+    text-align: left; /* Căn trái thông tin */
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    display: block; /* Đảm bảo hiển thị dọc */
+}
+
+.user-info strong {
+    color: #1f2937;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.status.text-danger {
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.status.text-success {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+/* Posts Section */
+.posts-section {
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 1100px;
+    max-width: 100%;
+    background: #F8F9FD;
+    border-radius: 10px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 10px 10px -5px;
+    padding: 15px;
+}
+
+.Chucnang {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button_cn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+}
+
+/* Tùy chỉnh nút add với hiệu ứng */
+.button_cn.add {
+    position: relative;
+    width: 150px; /* Đồng bộ với nút Xóa */
+    height: 50px; /* Đồng bộ với nút Xóa */
+    border: 2px solid #10b981; /* Màu green-500 */
+    background-color: #10b981; /* Màu green-500 */
+    border-radius: 5px; /* Đồng bộ bo góc với nút Xóa */
+    cursor: pointer;
+    overflow: hidden; /* Ẩn phần tràn */
+}
+
+.button_cn.add:hover {
+    background-color: #10b981; /* Giữ màu khi hover */
+}
+
+.button_cn.add:active {
+    background-color: #10b981; /* Giữ màu khi active */
+    border-color: #10b981; /* Giữ màu viền khi active */
+}
+
+.button_cn.add span:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
+    color: #e5e7eb; /* text-gray-200 */
+    font-weight: 600; /* font-semibold */
+    transition: transform 0.3s ease;
+    z-index: 1; /* Đảm bảo chữ nằm trên SVG */
+}
+
+.button_cn.add:hover span:first-child {
+    transform: translate(-150px, -50%); /* Trượt sang trái để nhường chỗ cho dấu "+" */
+}
+
+.button_cn.add span:last-child {
+    position: absolute;
+    right: 0; /* Bắt đầu từ bên phải */
+    top: 0;
+    height: 100%;
+    width: 0; /* Ban đầu ẩn, chỉ hiển thị khi hover */
+    background-color: #10b981; /* bg-green-500 */
+    border-radius: 5px; /* rounded-lg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%); /* Ban đầu nằm ngoài bên phải */
+    transition: transform 0.3s ease, width 0.3s ease;
+    z-index: 2; /* Đảm bảo che phủ chữ */
+}
+
+.button_cn.add:hover span:last-child {
+    width: 150px; /* Mở rộng toàn bộ nút */
+    transform: translateX(0); /* Trượt từ phải sang trái che chữ "Thêm" */
+}
+
+.button_cn.add .svg {
+    width: 24px; /* Kích thước SVG */
+    height: 24px;
+    color: #ffffff; /* text-white */
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block; /* Đảm bảo SVG hiển thị */
+}
+
+/* Tùy chỉnh nút delete với hiệu ứng giống nút add */
+.button_cn.delete {
+    position: relative;
+    width: 150px; /* Đồng bộ với nút Thêm */
+    height: 50px; /* Đồng bộ với nút Thêm */
+    border: 2px solid #e62222; /* Màu đỏ ban đầu */
+    background-color: #e62222; /* Màu đỏ ban đầu */
+    border-radius: 5px; /* Đồng bộ bo góc với nút Thêm */
+    cursor: pointer;
+    overflow: hidden; /* Ẩn phần tràn */
+}
+
+.button_cn.delete:hover {
+    background-color: #ff3636; /* Màu đỏ sáng khi hover */
+}
+
+.button_cn.delete:active {
+    background-color: #ff3636; /* Giữ màu khi active */
+    border-color: #ff3636; /* Giữ màu viền khi active */
+}
+
+.button_cn.delete span:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
+    color: #ffffff; /* Màu chữ trắng */
+    font-weight: 600; /* font-semibold */
+    transition: transform 0.3s ease;
+    z-index: 1; /* Đảm bảo chữ nằm trên SVG */
+    display: block; /* Đảm bảo hiển thị */
+}
+
+.button_cn.delete:hover span:first-child {
+    transform: translate(-150px, -50%); /* Trượt sang trái để nhường chỗ cho biểu tượng thùng rác */
+}
+
+.button_cn.delete span:last-child {
+    position: absolute;
+    right: 0; /* Bắt đầu từ bên phải */
+    top: 0;
+    height: 100%;
+    width: 0; /* Ban đầu ẩn, chỉ hiển thị khi hover */
+    background-color: #ff3636; /* Màu đỏ sáng khi hover */
+    border-radius: 5px; /* rounded-lg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%); /* Ban đầu nằm ngoài bên phải */
+    transition: transform 0.3s ease, width 0.3s ease;
+    z-index: 2; /* Đảm bảo che phủ chữ */
+}
+
+.button_cn.delete:hover span:last-child {
+    width: 150px; /* Mở rộng toàn bộ nút */
+    transform: translateX(0); /* Trượt từ phải sang trái che chữ "Xóa" */
+}
+
+.button_cn.delete span:last-child svg {
+    width: 24px; /* Kích thước SVG giống dấu "+" */
+    height: 24px;
+    stroke: #ffffff; /* Màu đường viền trắng */
+    fill: none; /* Xóa fill để chỉ vẽ đường viền */
+    stroke-width: 2; /* Độ dày tương đương dấu "+" */
+    stroke-linecap: round; /* Đầu đường bo tròn, giống dấu "+" */
+    stroke-linejoin: round; /* Góc bo tròn, giống dấu "+" */
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    max-width: 1100px; /* Khớp với max-width của .user-info-card */
+    border: 1px solid #e5e7eb;
+}
+
+.table {
+    width: 100%;
+    max-width: 1100px; /* Khớp với max-width của .user-info-card */
+    border-collapse: collapse;
+    background-color: #fff;
+    margin: 0 auto;
+    border-spacing: 0; /* Đảm bảo không có khoảng cách giữa các ô */
+}
+
+.table th,
+.table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+/* Điều chỉnh cột ID để checkbox chèn lên ID */
+.table td:nth-child(1) {
+    position: relative; /* Tạo context cho position absolute của checkbox */
+}
+
+.table td:nth-child(1) .checkbox-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa checkbox lên ID */
+    margin: 0; /* Loại bỏ margin tự động */
+}
+
+.table td:nth-child(1) .checkbox-container input {
+    margin: 0; /* Đảm bảo input không tạo khoảng cách */
+}
+
+/* Điều chỉnh chiều rộng của các cột */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 20%; /* Cột ID */
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 20%; /* Cột Tiêu đề */
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 60%; /* Cột Nội dung */
+}
+
+/* Đảm bảo header có viền liền mạch */
+.table th {
+    background: linear-gradient(45deg, #374151 0%, #4b5563 100%);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Đảm bảo viền trên của header liền mạch */
+.table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Đảm bảo viền dưới của tbody liền mạch */
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+}
+
+.table tbody tr:hover {
+    background-color: #f3f4f6;
+    transition: background-color 0.3s ease;
+}
+
+/* Checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #ccc;
+    border-radius: 100%;
+    background: #e8e8e8;
+    box-shadow: 3px 3px 5px #c5c5c5, -3px -3px 5px #ffffff;
+    transition-duration: 0.5s;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    box-shadow: inset 3px 3px 5px #c5c5c5, inset -3px -3px 5px #ffffff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    opacity: 1;
+}
+
+.checkbox-container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid darkgray;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+/* DangBai Popup */
+.DangBai {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 40px 40px -20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    z-index: 1000;
+    text-align: center;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.Title {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input_tieude input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+}
+
+.input_tieude input:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+}
+
+.Content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Content textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #34495e;
+    resize: vertical;
+    margin-bottom: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+}
+
+.Content textarea:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+}
+
+.Title button[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e74c3c;
+}
+
+.Title button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+.Content button[type="submit"] {
+    background: linear-gradient(45deg, #3498db 0%, #3b82f6 100%);
+}
+
+.Content button[type="submit"]:hover {
+    transform: scale(1.03);
+    background: linear-gradient(45deg, #2980b9 0%, #3498db 100%);
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-pagination {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 20px;
+    background-color: #e5e7eb;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    box-shadow: #cff0ff 0px 5px 5px -2px;
+}
+
+.btn-pagination:hover {
+    background-color: #d1d5db;
+}
+
+.btn-pagination.active {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+/* Links */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+}
+
+.btn-admin {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.btn-admin:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-logout {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.btn-logout:hover {
+    background-color: #b91c1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 25px 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .user-info-card {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .user-info-layout {
+        flex-direction: column; /* Chuyển thành dọc trên màn hình nhỏ */
+        text-align: center;
+    }
+
+    .user-avatar {
+        margin-bottom: 15px; /* Khoảng cách giữa avatar và thông tin */
+    }
+
+    .avatar-image {
+        width: 100px; /* Giảm kích thước avatar trên màn hình nhỏ */
+        height: 100px;
+    }
+
+    .post {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .table-wrapper {
+        width: 90%;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+
+    .btn,
+    .button_cn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .DangBai {
+        max-width: 400px;
+    }
+
+    .input_tieude input,
+    .Content textarea {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Responsive cho nút add */
+    .button_cn.add {
+        width: 120px;
+        height: 40px;
+    }
+
+    .button_cn.add span:first-child {
+        font-size: 14px;
+    }
+
+    .button_cn.add span:last-child {
+        height: 30px;
+        width: 0;
+    }
+
+    .button_cn.add:hover span:first-child {
+        transform: translate(-120px, -50%); /* Trượt sang trái */
+    }
+
+    .button_cn.add:hover span:last-child {
+        width: 120px;
+    }
+
+    .button_cn.add .svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Responsive cho nút delete */
+    .button_cn.delete {
+        width: 120px;
+        height: 40px;
+    }
+
+    .button_cn.delete span:first-child {
+        font-size: 14px;
+    }
+
+    .button_cn.delete span:last-child {
+        height: 30px;
+        width: 0;
+    }
+
+    .button_cn.delete:hover span:first-child {
+        transform: translate(-120px, -50%); /* Trượt sang trái */
+    }
+
+    .button_cn.delete:hover span:last-child {
+        width: 120px;
+    }
+
+    .button_cn.delete span:last-child svg {
+        width: 20px;
+        height: 20px;
+        stroke-width: 2; /* Giữ độ dày cho màn hình nhỏ */
+    }
+}
