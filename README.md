@@ -40,16 +40,13 @@ Võ Anh Kiệt - 22001245
 1. **Cài đặt Docker (nếu chưa có)**
 2. **Build Docker Image**:
    ```sh
-   docker build -t tiny-app .
+   docker pull vnmkhoa/flask_tiny_app:latest
    ```
 3. **Chạy ứng dụng**:
    ```sh
    docker run -p 5000:5000 tiny-app
    ```
-4. **Mở trình duyệt và truy cập**:
-   ```
-   http://localhost:5000
-   ```
+
 
 ## Version 1.0.0 (Initial Release)
 - Đẩy mã nguồn ban đầu của ứng dụng Flask lên GitHub.
